@@ -57,6 +57,7 @@ namespace School
         // When the user presses a key, determine whether to add a new student to a class, remove a student from a class, or modify the details of a student
         private void studentsList_KeyDown(object sender, KeyEventArgs e)
         {
+            #region Check key
             switch (e.Key)
             {
                 // TODO: Exercise 1: Task 1a: If the user pressed Enter, edit the details for the currently selected student
@@ -86,6 +87,7 @@ namespace School
                     }
                     break;
             }
+            #endregion
         }
 
         #region Predefined code
