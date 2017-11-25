@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mod01Lab", "Mod01Lab", "{85
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School", "Exercise 1\School\School.csproj", "{8FE94A3F-7DD0-414F-8D6D-4F0C2A3CF760}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise 1", "Exercise 1", "{68E0D0D8-C480-4CEA-A781-4E81FDB32B10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,7 +24,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{8FE94A3F-7DD0-414F-8D6D-4F0C2A3CF760} = {850464A5-0457-4AA6-9D4B-A96BC8219B37}
+		{8FE94A3F-7DD0-414F-8D6D-4F0C2A3CF760} = {68E0D0D8-C480-4CEA-A781-4E81FDB32B10}
+		{68E0D0D8-C480-4CEA-A781-4E81FDB32B10} = {850464A5-0457-4AA6-9D4B-A96BC8219B37}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {51C44E1C-0CEC-4853-BAEC-5C4FA90454D6}
