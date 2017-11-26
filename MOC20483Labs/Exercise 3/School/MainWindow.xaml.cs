@@ -60,6 +60,7 @@ namespace School
             switch (e.Key)
             {
                 // If the user pressed Enter, edit the details for the currently selected student
+                #region Enter Key Press
                 case Key.Enter: Student student = this.studentsList.SelectedItem as Student;
 
                     // Use the StudentsForm to display and edit the details of the student
@@ -83,8 +84,10 @@ namespace School
                         saveChanges.IsEnabled = true;
                     }
                     break;
+                #endregion
 
                 // If the user pressed Insert, add a new student
+                #region Insert Key Press
                 case Key.Insert:
 
                     // Use the StudentsForm to get the details of the student from the user
@@ -113,11 +116,28 @@ namespace School
                         saveChanges.IsEnabled = true;
                     }
                     break;
+                #endregion
 
-                    // TODO: Exercise 3: Task 1a: If the user pressed Delete, remove the currently selected student
+                // TODO: Exercise 3: Task 1a: If the user pressed Delete, remove the currently selected student
+                #region Delete Key Press
+                case Key.Delete:
+                    student = studentsList.SelectedItem as Student;
+
                     // TODO: Exercise 3: Task 2a: Prompt the user to confirm that the student should be removed
+                    MessageBoxResult resultMessageBox = MessageBox.Show(
+                        string.Format($"Remove {student.FirstName} {student.LastName}"),
+                        "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+
                     // TODO: Exercise 3: Task 3a: If the user clicked Yes, remove the student from the database
-                    // TODO: Exercise 3: Task 3b: Enable saving (changes are not made permanent until they are written back to the database)
+                    if (resultMessageBox == MessageBoxResult.Yes)
+                    {
+                        schoolContext.DeleteObject(student);
+
+                        // TODO: Exercise 3: Task 3b: Enable saving (changes are not made permanent until they are written back to the database)
+                        saveChanges.IsEnabled = true;
+                    }
+                    break;
+                #endregion
             }
         }
 
