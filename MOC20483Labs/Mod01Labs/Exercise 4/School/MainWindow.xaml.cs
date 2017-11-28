@@ -159,11 +159,20 @@ namespace School
         {
             // Convert the date of birth provided in the value parameter and convert to the age of the student in years
             // TODO: Exercise 4: Task 2a: Check that the value provided is not null. If it is, return an empty string
-            // TODO: Exercise 4: Task 2b: Convert the value provided into a DateTime value
-            // TODO: Exercise 4: Task 2c: Work out the difference between the current date and the value provided
-            // TODO: Exercise 4: Task 2d: Convert this result into a number of years
-            // TODO: Exercise 4: Task 2e: Convert the number of years into a string and return it
+            if (value != null)
+            {
+                // TODO: Exercise 4: Task 2b: Convert the value provided into a DateTime value
+                DateTime studentDateBirth = (DateTime) value;
 
+                // TODO: Exercise 4: Task 2c: Work out the difference between the current date and the value provided
+                TimeSpan differenceWithStudentDateBirth = DateTime.Now.Subtract(studentDateBirth);
+
+                // TODO: Exercise 4: Task 2d: Convert this result into a number of years
+                short ageInYears = (short) (differenceWithStudentDateBirth.Days/365.25);
+
+                // TODO: Exercise 4: Task 2e: Convert the number of years into a string and return it
+                return ageInYears.ToString();
+            }
             return "";
         }
 
