@@ -12,10 +12,15 @@ namespace FourthCoffee.MethodTestHarness
         public Utilities() 
         {
             // TODO: 02: Invoke the Initialize method.
-        
+            var isInizalize = Inizalize();
         }
 
         // TODO: 01: Define the Initialize method.
+        bool Inizalize()
+        {
+            var path = GetApplicationPath();
+            return !string.IsNullOrEmpty(path);
+        }
         
 
 
